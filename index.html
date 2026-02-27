@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ElectroMart - Electronic Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <div class="logo">Electro<span>Mart</span></div>
+    </div>
+    <div class="nav-center">
+      <div class="search-bar">
+        <input type="text" placeholder="Search for mobiles, laptops, TVs & more..." />
+        <button class="btn-primary">Search</button>
+      </div>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <button class="nav-link active" data-target="home-page">Home</button>
+        <button class="nav-link" data-target="products-page">Products</button>
+        <button class="nav-link" data-target="cart-page">Cart</button>
+        <button class="nav-link" data-target="orders-page">Orders</button>
+        <button class="nav-link" data-target="about-page">About</button>
+        <button class="nav-link" data-target="contact-page">Contact</button>
+        <button class="nav-link" data-target="login-page">Login</button>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HOME PAGE -->
+    <section id="home-page" class="page-section active">
+      <!-- Banner -->
+      <section class="hero-banner card">
+        <div class="hero-text">
+          <h1>Latest Electronics at Best Prices</h1>
+          <p>Shop mobiles, laptops, TVs and more with fast delivery and secure checkout.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" data-target="products-page">Shop Now</button>
+            <button class="btn-secondary" data-target="about-page">Learn More</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="Modern electronics" />
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <p>Handpicked deals on top categories</p>
+        </div>
+        <div class="product-grid">
+          <!-- Mobile -->
+          <article class="product-card card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Smartphone" />
+            </div>
+            <div class="product-info">
+              <h3>Galaxy X Pro 5G</h3>
+              <p class="product-category">Mobile Phone</p>
+              <p class="product-price">$799</p>
+              <button class="btn-outline" data-target="product-details-page">View Details</button>
+            </div>
+          </article>
+          <!-- Laptop -->
+          <article class="product-card card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Laptop" />
+            </div>
+            <div class="product-info">
+              <h3>UltraBook Air 14"</h3>
+              <p class="product-category">Laptop</p>
+              <p class="product-price">$1,199</p>
+              <button class="btn-outline" data-target="product-details-page">View Details</button>
+            </div>
+          </article>
+          <!-- TV -->
+          <article class="product-card card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80" alt="TV" />
+            </div>
+            <div class="product-info">
+              <h3>VisionPlus 55" 4K</h3>
+              <p class="product-category">Smart TV</p>
+              <p class="product-price">$629</p>
+              <button class="btn-outline" data-target="product-details-page">View Details</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Shop by Category</h2>
+        </div>
+        <div class="category-grid">
+          <div class="category-card card">
+            <div class="category-icon">📱</div>
+            <h3>Mobiles</h3>
+          </div>
+          <div class="category-card card">
+            <div class="category-icon">💻</div>
+            <h3>Laptops</h3>
+          </div>
+          <div class="category-card card">
+            <div class="category-icon">📺</div>
+            <h3>Televisions</h3>
+          </div>
+          <div class="category-card card">
+            <div class="category-icon">🎧</div>
+            <h3>Accessories</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-columns">
+          <div>
+            <h4>ElectroMart</h4>
+            <p>Your trusted destination for the latest electronics.</p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>Email: support@electromart.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <p>Help Center</p>
+            <p>Returns & Refunds</p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2026 ElectroMart. All rights reserved.</p>
+      </footer>
+    </section>
+
+    <!-- 2. PRODUCT LISTING PAGE -->
+    <section id="products-page" class="page-section">
+      <section class="section-block layout-with-sidebar">
+        <aside class="sidebar card">
+          <h3>Filters</h3>
+          <div class="filter-group">
+            <h4>Price</h4>
+            <label><input type="checkbox" /> Under $500</label>
+            <label><input type="checkbox" /> $500 - $1000</label>
+            <label><input type="checkbox" /> Above $1000</label>
+          </div>
+          <div class="filter-group">
+            <h4>Category</h4>
+            <label><input type="checkbox" /> Mobiles</label>
+            <label><input type="checkbox" /> Laptops</label>
+            <label><input type="checkbox" /> TVs</label>
+          </div>
+          <div class="filter-group">
+            <h4>Brand</h4>
+            <label><input type="checkbox" /> Samsung</label>
+            <label><input type="checkbox" /> Apple</label>
+            <label><input type="checkbox" /> Sony</label>
+          </div>
+          <button class="btn-secondary full-width">Apply Filters</button>
+        </aside>
+
+        <div class="section-content">
+          <div class="section-header">
+            <h2>All Products</h2>
+            <p>Showing popular electronics</p>
+          </div>
+          <div class="product-grid">
+            <!-- Repeatable product cards -->
+            <article class="product-card card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80" alt="Phone" />
+              </div>
+              <div class="product-info">
+                <h3>iPhone 15 Pro</h3>
+                <p class="product-price">$1,099</p>
+                <div class="product-actions">
+                  <button class="btn-outline" data-target="product-details-page">Details</button>
+                  <button class="btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Laptop" />
+              </div>
+              <div class="product-info">
+                <h3>ZenBook Pro 16</h3>
+                <p class="product-price">$1,499</p>
+                <div class="product-actions">
+                  <button class="btn-outline" data-target="product-details-page">Details</button>
+                  <button class="btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80" alt="TV" />
+              </div>
+              <div class="product-info">
+                <h3>Bravia 65" OLED</h3>
+                <p class="product-price">$1,899</p>
+                <div class="product-actions">
+                  <button class="btn-outline" data-target="product-details-page">Details</button>
+                  <button class="btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Headphones" />
+              </div>
+              <div class="product-info">
+                <h3>NoiseCancel Max</h3>
+                <p class="product-price">$249</p>
+                <div class="product-actions">
+                  <button class="btn-outline" data-target="product-details-page">Details</button>
+                  <button class="btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- 3. PRODUCT DETAILS PAGE -->
+    <section id="product-details-page" class="page-section">
+      <section class="section-block product-details card">
+        <div class="product-details-image">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" alt="Product" />
+        </div>
+        <div class="product-details-info">
+          <h1>Galaxy X Pro 5G (128GB, Midnight Black)</h1>
+          <p class="product-price big">$799</p>
+          <p class="product-rating">★★★★☆ <span>(342 reviews)</span></p>
+          <p class="product-description">
+            Experience lightning-fast 5G, a stunning AMOLED display, pro-grade camera, and all-day battery in a sleek design. Perfect for work, gaming, and entertainment.
+          </p>
+
+          <div class="product-actions-large">
+            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-secondary">Buy Now</button>
+          </div>
+
+          <div class="reviews-block">
+            <h3>Customer Reviews</h3>
+            <div class="review-item">
+              <p class="review-author">John D.</p>
+              <p class="review-rating">★★★★★</p>
+              <p class="review-text">Fantastic phone with great battery life and display.</p>
+            </div>
+            <div class="review-item">
+              <p class="review-author">Sarah P.</p>
+              <p class="review-rating">★★★★☆</p>
+              <p class="review-text">Camera is amazing, performance is smooth. Worth the price.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- 4. CART PAGE -->
+    <section id="cart-page" class="page-section">
+      <section class="section-block cart-layout">
+        <div class="section-header">
+          <h2>Your Cart</h2>
+          <p>Review items before checkout</p>
+        </div>
+        <div class="cart-main">
+          <div class="cart-items card">
+            <div class="cart-item">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=200&q=80" alt="Phone" />
+              <div class="cart-item-info">
+                <h3>Galaxy X Pro 5G</h3>
+                <p>$799</p>
+                <label>Qty:
+                  <input type="number" value="1" min="1" />
+                </label>
+              </div>
+              <p class="cart-item-total">$799</p>
+            </div>
+            <div class="cart-item">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=200&q=80" alt="Laptop" />
+              <div class="cart-item-info">
+                <h3>UltraBook Air 14"</h3>
+                <p>$1,199</p>
+                <label>Qty:
+                  <input type="number" value="1" min="1" />
+                </label>
+              </div>
+              <p class="cart-item-total">$1,199</p>
+            </div>
+          </div>
+          <aside class="cart-summary card">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span>$1,998</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span>$20</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span>$2,018</span>
+            </div>
+            <button class="btn-primary full-width" data-target="checkout-page">Proceed to Checkout</button>
+          </aside>
+        </div>
+      </section>
+    </section>
+
+    <!-- 5. CHECKOUT PAGE -->
+    <section id="checkout-page" class="page-section">
+      <section class="section-block checkout-layout">
+        <div class="section-header">
+          <h2>Checkout</h2>
+          <p>Secure payment and fast delivery</p>
+        </div>
+        <div class="checkout-main">
+          <section class="card">
+            <h3>Shipping Address</h3>
+            <form class="form-grid">
+              <div class="form-field">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" />
+              </div>
+              <div class="form-field">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+1 555 123 4567" />
+              </div>
+              <div class="form-field full-width">
+                <label>Address Line 1</label>
+                <input type="text" placeholder="123 Main Street" />
+              </div>
+              <div class="form-field full-width">
+                <label>Address Line 2</label>
+                <input type="text" placeholder="Apartment, suite, etc. (optional)" />
+              </div>
+              <div class="form-field">
+                <label>City</label>
+                <input type="text" placeholder="New York" />
+              </div>
+              <div class="form-field">
+                <label>State</label>
+                <input type="text" placeholder="NY" />
+              </div>
+              <div class="form-field">
+                <label>Postal Code</label>
+                <input type="text" placeholder="10001" />
+              </div>
+              <div class="form-field">
+                <label>Country</label>
+                <input type="text" placeholder="United States" />
+              </div>
+            </form>
+          </section>
+
+          <section class="card">
+            <h3>Payment Method</h3>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" checked />
+                <span>Credit / Debit Card</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" />
+                <span>UPI</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" />
+                <span>Cash on Delivery (COD)</span>
+              </label>
+            </div>
+
+            <div class="card-details">
+              <div class="form-field full-width">
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456" />
+              </div>
+              <div class="form-field">
+                <label>Expiry</label>
+                <input type="text" placeholder="MM/YY" />
+              </div>
+              <div class="form-field">
+                <label>CVV</label>
+                <input type="password" placeholder="***" />
+              </div>
+              <div class="form-field full-width">
+                <label>Card Holder Name</label>
+                <input type="text" placeholder="John Doe" />
+              </div>
+            </div>
+          </section>
+
+          <aside class="order-summary card">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+              <span>Items (2)</span>
+              <span>$1,998</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span>$20</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span>$2,018</span>
+            </div>
+            <button class="btn-primary full-width">Place Order</button>
+          </aside>
+        </div>
+      </section>
+    </section>
+
+    <!-- 6. LOGIN PAGE -->
+    <section id="login-page" class="page-section">
+      <section class="auth-page">
+        <div class="auth-card card">
+          <h2>Login</h2>
+          <p>Welcome back! Please login to continue.</p>
+          <form class="auth-form">
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-field">
+              <label>Password</label>
+              <input type="password" placeholder="••••••••" />
+            </div>
+            <button class="btn-primary full-width">Login</button>
+          </form>
+          <p class="auth-alt">
+            New to ElectroMart?
+            <button class="link-button" data-target="signup-page">Create an account</button>
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- 7. SIGNUP PAGE -->
+    <section id="signup-page" class="page-section">
+      <section class="auth-page">
+        <div class="auth-card card">
+          <h2>Sign Up</h2>
+          <p>Create your ElectroMart account.</p>
+          <form class="auth-form">
+            <div class="form-field">
+              <label>Full Name</label>
+              <input type="text" placeholder="John Doe" />
+            </div>
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-field">
+              <label>Password</label>
+              <input type="password" placeholder="Create a strong password" />
+            </div>
+            <button class="btn-primary full-width">Sign Up</button>
+          </form>
+          <p class="auth-alt">
+            Already have an account?
+            <button class="link-button" data-target="login-page">Login</button>
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- 8. ORDER HISTORY PAGE -->
+    <section id="orders-page" class="page-section">
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Your Orders</h2>
+          <p>View your previous purchases</p>
+        </div>
+        <div class="orders-list card">
+          <div class="order-item">
+            <div>
+              <h3>Order #EM12345</h3>
+              <p>Date: Feb 12, 2026</p>
+              <p>Items: Galaxy X Pro 5G, NoiseCancel Max</p>
+            </div>
+            <div class="order-right">
+              <p class="order-total">$1,048</p>
+              <span class="order-status status-delivered">Delivered</span>
+            </div>
+          </div>
+          <div class="order-item">
+            <div>
+              <h3>Order #EM12312</h3>
+              <p>Date: Jan 28, 2026</p>
+              <p>Items: UltraBook Air 14"</p>
+            </div>
+            <div class="order-right">
+              <p class="order-total">$1,199</p>
+              <span class="order-status status-shipped">Shipped</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- 9. ABOUT US PAGE -->
+    <section id="about-page" class="page-section">
+      <section class="section-block about-layout">
+        <div class="about-text card">
+          <h2>About ElectroMart</h2>
+          <p>
+            ElectroMart is a next-generation online electronics store committed to delivering the best in technology at unbeatable prices. From smartphones and laptops to TVs and accessories, we carefully curate products from trusted brands.
+          </p>
+          <div class="about-mission">
+            <div>
+              <h3>Our Mission</h3>
+              <p>To make cutting-edge technology accessible, affordable, and enjoyable for everyone.</p>
+            </div>
+            <div>
+              <h3>Our Vision</h3>
+              <p>To be the most trusted and customer-centric electronics marketplace worldwide.</p>
+            </div>
+          </div>
+          <div class="about-icons">
+            <div class="about-icon-card card">
+              <span>🚚</span>
+              <p>Fast & Reliable Delivery</p>
+            </div>
+            <div class="about-icon-card card">
+              <span>🛡️</span>
+              <p>Secure Payments</p>
+            </div>
+            <div class="about-icon-card card">
+              <span>⭐</span>
+              <p>Top-Rated Customer Support</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image card">
+          <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=900&q=80" alt="Team working" />
+        </div>
+      </section>
+    </section>
+
+    <!-- 10. CONTACT PAGE -->
+    <section id="contact-page" class="page-section">
+      <section class="section-block contact-layout">
+        <div class="contact-form card">
+          <h2>Contact Us</h2>
+          <p>Have questions? We're here to help.</p>
+          <form class="form-grid">
+            <div class="form-field full-width">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" />
+            </div>
+            <div class="form-field full-width">
+              <label>Email</label>
+              <input type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-field full-width">
+              <label>Message</label>
+              <textarea rows="4" placeholder="How can we help you?"></textarea>
+            </div>
+            <button class="btn-primary full-width">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info card">
+          <h3>Reach Us</h3>
+          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+          <p><strong>Email:</strong> support@electromart.com</p>
+          <p><strong>Address:</strong> 123 Tech Avenue, Silicon City, CA</p>
+          <div class="map-placeholder">
+            <p>Map Placeholder</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

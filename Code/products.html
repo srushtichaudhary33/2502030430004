@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products – ElectroMart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="products">
+  <header class="site-header">
+    <div class="header-strip">
+      <div class="container header-strip-inner">
+        <span>Deliver to <strong>India</strong></span>
+        <div class="header-strip-links">
+          <a href="contact.html">Help</a>
+          <a href="orders.html">Your Orders</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container header-main-inner">
+        <a href="index.html" class="brand-header">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-text">Electro<span class="brand-accent">Mart</span></span>
+        </a>
+        <form class="header-search" action="products.html" method="get" role="search">
+          <input type="search" name="q" class="header-search-input" placeholder="Search laptops, mobiles, headphones…" autocomplete="off" aria-label="Search products">
+          <button type="submit" class="header-search-btn">Search</button>
+        </form>
+        <div class="header-actions">
+          <a href="login.html" class="header-account">
+            <span class="header-account-line1">Hello</span>
+            <span class="header-account-line2">Account & Login</span>
+          </a>
+          <a href="orders.html" class="header-account">
+            <span class="header-account-line1">Returns</span>
+            <span class="header-account-line2">& Orders</span>
+          </a>
+          <a href="cart.html" class="header-cart" aria-label="Shopping cart">
+            <span class="header-cart-icon" aria-hidden="true">🛒</span>
+            <span class="header-cart-count" data-cart-count>0</span>
+          </a>
+          <button type="button" class="header-theme theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+            <span aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="header-catnav" aria-label="Shop by category">
+      <div class="container header-catnav-inner">
+        <a href="products.html" class="header-catnav-link header-catnav-all">All</a>
+        <a href="products.html?category=Laptop" class="header-catnav-link">Laptops</a>
+        <a href="products.html?category=Mobile" class="header-catnav-link">Mobiles</a>
+        <a href="products.html?category=Headphones" class="header-catnav-link">Headphones</a>
+        <a href="products.html?category=Smart%20Watch" class="header-catnav-link">Watches</a>
+        <a href="products.html?category=Speaker" class="header-catnav-link">Speakers</a>
+        <a href="products.html?category=Camera" class="header-catnav-link">Cameras</a>
+        <a href="products.html" class="header-catnav-link">Today’s Deals</a>
+        <a href="contact.html" class="header-catnav-link">Customer Service</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="page-header">
+      <h1 class="page-title">All products</h1>
+      <p class="page-subtitle">Browse all electronics – laptops, mobiles, audio and more.</p>
+    </header>
+
+    <section class="products-toolbar">
+      <input type="search" class="input" placeholder="Search by name or category…" data-search>
+      <select class="select" data-filter-category>
+        <option value="">All categories</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Headphones">Headphones</option>
+        <option value="Smart Watch">Smart Watch</option>
+        <option value="Speaker">Speaker</option>
+        <option value="Camera">Camera</option>
+      </select>
+      <select class="select" data-filter-price>
+        <option value="">Price: Any</option>
+        <option value="low">Below ₹10,000</option>
+        <option value="mid">₹10,000 – ₹40,000</option>
+        <option value="high">Above ₹40,000</option>
+      </select>
+      <select class="select" data-filter-rating>
+        <option value="">Rating: Any</option>
+        <option value="3">3★ & above</option>
+        <option value="4">4★ & above</option>
+      </select>
+    </section>
+
+    <div class="products-grid" data-products-grid></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div class="site-footer-col">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-col">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="orders.html">Orders</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-bottom">© ElectroMart</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
+

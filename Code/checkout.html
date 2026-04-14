@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout – ElectroMart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="checkout">
+  <main class="container">
+    <header class="page-header">
+      <h1 class="page-title">Checkout</h1>
+      <p class="page-subtitle">Enter your address. Online payment mate Razorpay window open thase; success pachhi confirmation page.</p>
+    </header>
+
+    <section class="cart-layout">
+      <form class="card" data-checkout-form>
+        <h2 class="section-title" style="font-size:1.05rem; margin-bottom:0.6rem;">Shipping details</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="addressLine">Address</label>
+            <input id="addressLine" name="addressLine" type="text" class="input" placeholder="Flat / House no., Street">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" class="input" placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="pincode">Pincode</label>
+            <input id="pincode" name="pincode" type="text" class="input" placeholder="Pincode">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="text" class="input" placeholder="10 digit mobile number">
+          </div>
+        </div>
+
+        <h2 class="section-title" style="font-size:1.05rem; margin:1.2rem 0 0.6rem;">Payment method</h2>
+        <div class="form-group">
+          <label>
+            <input type="radio" name="paymentMethod" value="Razorpay Online" checked> Pay online (Razorpay – Card / UPI / Netbanking)
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="Cash on Delivery"> Cash on Delivery
+          </label>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <button type="submit" class="btn btn-primary">Continue to payment</button>
+        </div>
+      </form>
+
+      <aside class="card">
+        <h2 class="section-title" style="font-size:1.05rem; margin-bottom:0.6rem;">Order summary</h2>
+        <div data-checkout-summary></div>
+        <p class="muted" style="margin-top:0.8rem;">Online: Razorpay → payment successful → Order Successful page. COD: direct confirmation.</p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Demo payment: shows when Key ID is not set. Real Razorpay opens only with a valid Key from dashboard. -->
+  <div id="payment-demo-modal" class="payment-demo-backdrop" hidden>
+    <div class="payment-demo-dialog card" role="dialog" aria-modal="true" aria-labelledby="payment-demo-title">
+      <div class="payment-demo-header">
+        <span class="payment-demo-badge">ElectroMart</span>
+        <h2 id="payment-demo-title">Secure payment</h2>
+        <p class="muted payment-demo-sub">Demo mode — add your Razorpay Test Key ID below for the real gateway.</p>
+      </div>
+      <div class="payment-demo-amount-row">
+        <span class="muted">Pay</span>
+        <strong data-demo-amount>₹0</strong>
+      </div>
+      <p class="muted" style="font-size:0.82rem; margin-top:0.75rem;">
+        <code>checkout.html</code> ma <code>window.RAZORPAY_KEY_ID = "rzp_test_..."</code> paste karo
+        (<a href="https://dashboard.razorpay.com/app/keys" target="_blank" rel="noopener">Razorpay Dashboard → API Keys</a>).
+      </p>
+      <div class="payment-demo-actions">
+        <button type="button" class="btn btn-primary" data-demo-pay style="flex:1;">Payment successful ✓</button>
+        <button type="button" class="btn btn-secondary" data-demo-cancel>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Razorpay: https://dashboard.razorpay.com/ → Settings → API Keys → Test Key ID paste below -->
+  <script>
+    window.RAZORPAY_KEY_ID = "rzp_test_your_key_id";
+  </script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+

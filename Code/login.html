@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – ElectroMart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="login">
+  <header class="site-header">
+    <div class="header-strip">
+      <div class="container header-strip-inner">
+        <span>Deliver to <strong>India</strong></span>
+        <div class="header-strip-links">
+          <a href="contact.html">Help</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container header-main-inner">
+        <a href="index.html" class="brand-header">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-text">Electro<span class="brand-accent">Mart</span></span>
+        </a>
+        <form class="header-search" action="products.html" method="get" role="search">
+          <input type="search" name="q" class="header-search-input" placeholder="Search products…" autocomplete="off" aria-label="Search">
+          <button type="submit" class="header-search-btn">Search</button>
+        </form>
+        <div class="header-actions">
+          <a href="register.html" class="header-account">
+            <span class="header-account-line1">New?</span>
+            <span class="header-account-line2">Register</span>
+          </a>
+          <a href="cart.html" class="header-cart" aria-label="Cart">
+            <span class="header-cart-icon" aria-hidden="true">🛒</span>
+            <span class="header-cart-count" data-cart-count>0</span>
+          </a>
+          <button type="button" class="header-theme theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+            <span aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Welcome back</h1>
+        <p>Login to continue shopping at ElectroMart.</p>
+      </div>
+      <form data-login-form>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" class="input" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group" style="margin-top:0.7rem;">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" class="input" placeholder="••••••••" required minlength="6">
+          <label style="font-size:0.82rem; margin-top:0.2rem;">
+            <input type="checkbox" id="showPassword"> Show password
+          </label>
+        </div>
+        <div data-auth-alert class="alert" style="margin-top:0.8rem; display:none;"></div>
+        <div style="margin-top:1rem;">
+          <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+        </div>
+      </form>
+      <p class="muted" style="margin-top:0.8rem;">
+        New to ElectroMart?
+        <a href="register.html">Create an account</a>
+      </p>
+      <div style="margin-top:1rem;">
+        <a href="index.html" class="btn btn-secondary" style="width:100%; text-align:center;">← Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    const showPassword = document.getElementById("showPassword");
+    const passwordInput = document.getElementById("password");
+    if (showPassword && passwordInput) {
+      showPassword.addEventListener("change", () => {
+        passwordInput.type = showPassword.checked ? "text" : "password";
+      });
+    }
+  </script>
+</body>
+
+</html>
+

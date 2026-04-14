@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroMart — Online Electronics Store | Laptops, Mobiles & More</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="home">
+  <header class="site-header">
+    <div class="header-strip">
+      <div class="container header-strip-inner">
+        <span>Deliver to <strong>India</strong></span>
+        <div class="header-strip-links">
+          <a href="contact.html">Help</a>
+          <a href="orders.html">Your Orders</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container header-main-inner">
+        <a href="index.html" class="brand-header">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-text">Electro<span class="brand-accent">Mart</span></span>
+        </a>
+        <form class="header-search" action="products.html" method="get" role="search">
+          <input type="search" name="q" class="header-search-input" placeholder="Search laptops, mobiles, headphones, cameras…" autocomplete="off" aria-label="Search products">
+          <button type="submit" class="header-search-btn">Search</button>
+        </form>
+        <div class="header-actions">
+          <a href="login.html" class="header-account">
+            <span class="header-account-line1">Hello</span>
+            <span class="header-account-line2">Account & Login</span>
+          </a>
+          <a href="orders.html" class="header-account">
+            <span class="header-account-line1">Returns</span>
+            <span class="header-account-line2">& Orders</span>
+          </a>
+          <a href="cart.html" class="header-cart" aria-label="Shopping cart">
+            <span class="header-cart-icon" aria-hidden="true">🛒</span>
+            <span class="header-cart-count" data-cart-count>0</span>
+          </a>
+          <button type="button" class="header-theme theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+            <span aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="header-catnav" aria-label="Shop by category">
+      <div class="container header-catnav-inner">
+        <a href="products.html" class="header-catnav-link header-catnav-all">All</a>
+        <a href="products.html?category=Laptop" class="header-catnav-link">Laptops</a>
+        <a href="products.html?category=Mobile" class="header-catnav-link">Mobiles</a>
+        <a href="products.html?category=Headphones" class="header-catnav-link">Headphones</a>
+        <a href="products.html?category=Smart%20Watch" class="header-catnav-link">Watches</a>
+        <a href="products.html?category=Speaker" class="header-catnav-link">Speakers</a>
+        <a href="products.html?category=Camera" class="header-catnav-link">Cameras</a>
+        <a href="products.html" class="header-catnav-link">Today’s Deals</a>
+        <a href="contact.html" class="header-catnav-link">Customer Service</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="deal-strip" role="status">
+      <strong>ElectroMart Electronics Days</strong> — Up to 40% off on laptops & mobiles · Free delivery on ₹999+ · Secure UPI & cards
+    </p>
+    <section class="hero">
+      <div>
+        <div class="hero-badge">
+          <span>⚡ New Season Sale</span>
+          <span>Up to 40% off</span>
+        </div>
+        <h1 class="hero-title">
+          Upgrade your world with <span>smart electronics</span>.
+        </h1>
+        <p class="hero-subtitle">
+          Shop the latest laptops, mobiles, audio, wearables and more – handpicked gadgets delivered
+          to your doorstep.
+        </p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary">Shop now</a>
+          <a href="#categories" class="btn btn-secondary">Browse categories</a>
+        </div>
+        <div class="hero-metrics">
+          <div>
+            <span>5k+</span>
+            Happy customers
+          </div>
+          <div>
+            <span>1k+</span>
+            Products in stock
+          </div>
+          <div>
+            <span>4.8★</span>
+            Store rating
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-product-row">
+            <div>
+              <div class="hero-tagline">Featured combo</div>
+              <div style="font-weight:600; margin-top:0.2rem;">Laptop + Headphones + Watch</div>
+            </div>
+            <div class="hero-chip">Save ₹12,000</div>
+          </div>
+          <div style="margin:0.75rem 0 0.5rem; font-size:0.85rem;">
+            Perfect for students, creators and professionals who want powerful performance and
+            immersive sound.
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; font-size:0.8rem;">
+            <div>
+              <div class="muted">Starting from</div>
+              <div style="font-size:1.1rem; font-weight:700;">₹69,999</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="muted">EMI from</div>
+              <div style="font-weight:600;">₹3,499 / month</div>
+            </div>
+          </div>
+          <div class="hero-orbit"></div>
+          <div class="hero-floating">
+            <div class="hero-floating-card">
+              <span class="hero-floating-dot"></span>
+              <span>Same‑day delivery on selected cities</span>
+            </div>
+            <div class="hero-floating-card">
+              <span>⭐ 4.8 store rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Shop by category</h2>
+          <p class="section-subtitle">Find the perfect gadget for every need.</p>
+        </div>
+      </div>
+      <div class="categories-grid">
+        <a href="products.html?category=Laptop" class="category-card">
+          <div class="category-icon">💻</div>
+          <h3>Laptops</h3>
+          <span>Work, study and create.</span>
+        </a>
+        <a href="products.html?category=Mobile" class="category-card">
+          <div class="category-icon">📱</div>
+          <h3>Mobiles</h3>
+          <span>Latest 5G smartphones.</span>
+        </a>
+        <a href="products.html?category=Headphones" class="category-card">
+          <div class="category-icon">🎧</div>
+          <h3>Audio</h3>
+          <span>Headphones and speakers.</span>
+        </a>
+        <a href="products.html?category=Smart%20Watch" class="category-card">
+          <div class="category-icon">⌚</div>
+          <h3>Wearables</h3>
+          <span>Smart watches & bands.</span>
+        </a>
+        <a href="products.html?category=Camera" class="category-card">
+          <div class="category-icon">📷</div>
+          <h3>Cameras</h3>
+          <span>DSLRs & action cams.</span>
+        </a>
+        <a href="products.html" class="category-card">
+          <div class="category-icon">🔌</div>
+          <h3>Accessories</h3>
+          <span>Chargers, cables & more.</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured products</h2>
+          <p class="section-subtitle">Top picks loved by ElectroMart customers.</p>
+        </div>
+        <a href="products.html" class="btn btn-ghost">View all</a>
+      </div>
+      <div class="product-slider" data-product-slider>
+        <button class="slider-btn slider-btn-left" type="button" aria-label="Scroll left" data-slider-left>‹</button>
+        <div class="product-slider-track" data-featured-products></div>
+        <button class="slider-btn slider-btn-right" type="button" aria-label="Scroll right" data-slider-right>›</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Exclusive offers</h2>
+          <p class="section-subtitle">Use coupons and save more on your order.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="summary-row">
+          <span>🎟️ SAVE20</span>
+          <span>Flat 20% off on orders above ₹15,000</span>
+        </div>
+        <div class="summary-row">
+          <span>✨ WELCOME10</span>
+          <span>10% off on your first order</span>
+        </div>
+        <div class="chip-row">
+          <span class="chip">No cost EMI on select cards</span>
+          <span class="chip">Free delivery on orders above ₹999</span>
+          <span class="chip">Secure payments with UPI & cards</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div class="site-footer-col">
+        <h3>Get to Know Us</h3>
+        <ul>
+          <li><a href="index.html">About ElectroMart</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="contact.html">Press</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-col">
+        <h3>Shop with Us</h3>
+        <ul>
+          <li><a href="products.html">All products</a></li>
+          <li><a href="orders.html">Your orders</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-col">
+        <h3>Customer care</h3>
+        <ul>
+          <li><a href="contact.html">Help / Contact</a></li>
+          <li><a href="orders.html">Track package</a></li>
+          <li><a href="contact.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-col">
+        <h3>Policy</h3>
+        <ul>
+          <li><a href="contact.html">Privacy</a></li>
+          <li><a href="contact.html">Terms of use</a></li>
+          <li><a href="contact.html">Secure payments</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-trust">
+      <span>✓ Secure checkout</span>
+      <span>✓ Easy returns</span>
+      <span>✓ Genuine products</span>
+      <span>✓ EMI & UPI on select items</span>
+    </div>
+    <div class="site-footer-bottom">
+      © <span id="yearSpan"></span> ElectroMart — Smart Electronic Store · Not affiliated with Amazon or Flipkart
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yearSpan").textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
